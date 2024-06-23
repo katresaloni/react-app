@@ -138,7 +138,7 @@ function App() {
 
   return (
     <div className="app">
-         <h1 className="heading">My Todo App</h1>
+         <h1 className="heading">Todo List</h1>
       <div className="todo-list">
         <input
           type="text"
