@@ -1,16 +1,13 @@
 import React from 'react';
 
-function TodoItem({ todo, toggleTodo }) {
-  function handleTodoClick() {
-    toggleTodo(todo.id);
-  }
-
-  return (
-    <div>
-      <input type="checkbox" checked={todo.complete} onChange={handleTodoClick} />
-      {todo.name}
-    </div>
-  );
+function TodoItem({ todo, index, toggleComplete, removeTodo }) {
+    return (
+        <li style={{ textDecoration: todo.completed ? 'line-through' : '' }}>
+            {todo.text}
+            {/* <button onclick={() => toggleComplete(index)}>Complete</button> */}
+            <button onClick={() => removeTodo(index)}>Remove</button>
+        </li>
+    );
 }
 
 export default TodoItem;
